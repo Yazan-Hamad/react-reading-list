@@ -31,11 +31,16 @@ function App() {
   };
 
   return <div className="app">
-    <div>
-      <label>Total number of Books:</label>
-    <p>{books.length}</p>
-    </div>
-    <h1>Reading List</h1>
+      <div className="columns is-vcentered is-centered">
+        <div className="column">
+        <h1>Reading List</h1>
+        </div>
+        <div className="column is-one-quarter">
+        <h5 className="">Total number of Books:</h5>
+    <h6 className="">{books.length}</h6>
+        </div>
+      </div>
+
     <BookList books={books} onEdit={editBookById} onDelete={deleteBookById}/>
     <BookCreate onCreate={createBook} />
   </div>;
